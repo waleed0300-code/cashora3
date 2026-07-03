@@ -1,4 +1,4 @@
-name: Build Cashora
+name: Build and Deploy Cashora
 
 on:
   push:
@@ -25,8 +25,11 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Upload dist
-        uses: actions/upload-artifact@v4
+      - name: Deploy to InfinityFree via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          name: dist
-          path: dist
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/      
+          server-dir: htdocs/
