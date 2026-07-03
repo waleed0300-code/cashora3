@@ -1,0 +1,6 @@
+{
+  "name": "Cashora",
+  "description": "Earning and Investment Platform with User Dashboard, Admin Panel, Deposit/Withdrawal Systems, and Package Activations. Fully compatible with InfinityFree Hosting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
